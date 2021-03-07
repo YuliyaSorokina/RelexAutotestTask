@@ -1,0 +1,73 @@
+{
+  "id": "7a82d62b-492c-4197-a6a9-70d19710a242",
+  "version": "2.0",
+  "name": "RelexTest",
+  "url": "https://www.relex.ru/",
+  "tests": [{
+    "id": "d0d9adf1-1905-4724-81c9-26b2b353c507",
+    "name": "Task1",
+    "commands": [{
+      "id": "7fdd7faa-ce58-471e-b88e-454decd7c74b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.relex.ru/ru/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5ffbf63d-b60b-42ae-ac5c-8f09e4430367",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//nav//a[contains(text(),'Карьера')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae60aa4e-a4e9-4bd8-aeb6-aa7f6262064c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//nav//a[contains(text(),'Карьера')]",
+      "targets": [
+        ["css=li:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Карьера')]", "xpath:link"],
+        ["xpath=//ul[@id='horizontal-multilevel-menu']/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://job.relex.ru')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "895f82a3-0fc6-4261-a501-3ddb6a8f97d5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(text(),'Узнать больше на сайте РЕЛЭКС')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8749544a-65b6-4aaf-a570-7f627a540ae5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Узнать больше на сайте РЕЛЭКС')]",
+      "targets": [
+        ["linkText=Узнать больше на сайте РЕЛЭКС", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Узнать больше на сайте РЕЛЭКС')]", "xpath:link"],
+        ["xpath=//div[@id='workarea']/div[3]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://relex.ru/ru/about-us/')]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Узнать больше на сайте РЕЛЭКС')]", "xpath:innerText"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win3",
+      "windowTimeout": 2000
+    }]
+  }],
+  "suites": [{
+    "id": "858f8746-fba8-4bfe-93b6-83f09f8e8e0b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d0d9adf1-1905-4724-81c9-26b2b353c507"]
+  }],
+  "urls": ["https://www.relex.ru/"],
+  "plugins": []
+}
